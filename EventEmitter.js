@@ -26,6 +26,7 @@ define(function(){
 				eventHandlerRegistry[event] = [];
 			}
 			eventHandlerRegistry[event].push(handler);
+			return this;
 		};
 
 		/**
@@ -42,6 +43,7 @@ define(function(){
 			jQuery(eventHandlerRegistry[event]).each(function() {
 				this(args);
 			});
+			return this;
 		};
 
 	}
